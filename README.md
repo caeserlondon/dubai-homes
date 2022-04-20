@@ -1,3 +1,9 @@
+# Dubai-homes
+
+Building a Real Estate Application. Rental and For Sale. Using React.JS and Next.JS with help of Rapid API and Bayut API.
+
+..................
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
