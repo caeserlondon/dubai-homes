@@ -2,6 +2,20 @@
 
 Building a Real Estate Application. Rental and For Sale. Using React.JS and Next.JS with help of Rapid API and Bayut API.
 
+Project's Dependencies:
+
+Chakra : Chakra UI is a simple, modular and accessible component library that gives us the building blocks we need to build our React application.
+
+Emotion : Emotion is a library designed for writing css styles with JavaScript.
+
+Axios : Axios is a promise-based HTTP Client for node.js and the browser.
+
+Millify : Millify. Converts long numbers into pretty, human-readable strings.
+
+N progres : NProgress.js. A nanoscopic progress bar. Featuring realistic trickle animations to convince our users that something is happening!.
+
+React-horizontal-scrolling : Scrolling horizontal menu component for React, support mouse and touch devices.
+
 ..................
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
