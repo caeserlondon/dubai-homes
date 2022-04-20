@@ -1,0 +1,4 @@
+{
+	"presets": ["nest/babel"],
+	"plugins": []
+}
