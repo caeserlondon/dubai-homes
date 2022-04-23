@@ -17,7 +17,7 @@ export const Banner = ({
 	<Flex flexWrap="wrap" justifyContent="center" alignItems="center" m="10">
 		<Image src={imageUrl} width={500} height={300} alt="banner" />
 		<Box p="5">
-			<Text color="yellow.500" fontSize="sm" fontWeight="medium">
+			<Text color="yellow.600" fontSize="sm" fontWeight="medium">
 				{purpose}
 			</Text>
 			<Text fontSize="3xl" fontWeight="bold" color="yellow.500">
@@ -25,7 +25,7 @@ export const Banner = ({
 				<br />
 				{title2}
 			</Text>
-			<Text fontSize="lg" paddingTop="3" paddingBottom="3" color="yellow.500">
+			<Text fontSize="lg" paddingTop="3" paddingBottom="3" color="yellow.600">
 				{desc1}
 				<br />
 				{desc2}
