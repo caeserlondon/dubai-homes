@@ -1,15 +1,14 @@
 import Head from "next/head";
 import { Box } from "@chakra-ui/react";
-import { Children } from "react";
 
-const Layout = ({ Children }) => (
+const Layout = ({ children }) => (
 	<>
 		<Head>
 			<title>Dubai Homes</title>
 		</Head>
 		<Box maxWidth="1280px" m="auto">
 			<header>Navbar</header>
-			<main>{Children}</main>
+			<main>{children}</main>
 			<footer>Footer</footer>
 		</Box>
 	</>
