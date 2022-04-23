@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Box, Flex, Text, Avatar } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
+import { Avatar } from "@chakra-ui/avatar";
 import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
@@ -26,7 +27,7 @@ const Property = ({
 			flexWrap="wrap"
 			w="420px"
 			p="5"
-			paddingTop="0"
+			paddingTop="0px"
 			justifyContent="flex-start"
 			cursor="pointer"
 		>
@@ -38,7 +39,7 @@ const Property = ({
 					alt="house"
 				/>
 			</Box>
-			<Box width="full">
+			<Box w="full">
 				<Flex paddingTop="2" alignItems="center" justifyContent="space-between">
 					<Flex alignItems="center">
 						<Box paddingRight="3" color="green.400">
