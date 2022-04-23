@@ -1,9 +1,8 @@
 import Router from "next/router";
 import Head from "next/head";
-import Nprogress from "nprogress";
-import { ChakraProvider, chakraProvider } from "@chakra-ui/react";
+import NProgress from "nprogress";
+import { ChakraProvider } from "@chakra-ui/react";
 import Layout from "../components/Layout";
-import { getStaticProps } from ".";
 
 function MyApp({ Component, pageProps }) {
 	return (
@@ -19,4 +18,3 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
-getStaticProps;
