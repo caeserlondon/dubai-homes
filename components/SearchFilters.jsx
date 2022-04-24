@@ -12,6 +12,8 @@ import {
 import { useRouter } from "next/router";
 import { MdCancel } from "react-icons/md";
 import Image from "next/image";
+import { baseUrl, fetchApi } from "../utils/fetchApi";
+import noresult from "../assets/images/noresult.svg";
 
 const SearchFilters = () => {
 	return <div>searchFilters</div>;
