@@ -34,7 +34,6 @@ const Search = ({ properties }) => {
 			{searchFilters && <SearchFilters />}
 			<Text fontSize="xl" p="4" fontWeight="bold">
 				Properties {router.query.purpose}
-				Properties {router.query.purpose}
 			</Text>
 			<Flex flexWrap="wrap">
 				{properties.map((property) => (
