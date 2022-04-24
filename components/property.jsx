@@ -45,7 +45,7 @@ const Property = ({
 						<Box paddingRight="3" color="red.500">
 							{isVerified && <GoVerified />}
 						</Box>
-						<Text fontweight="bold" fontSize="lg">
+						<Text fontWeight="bold" fontSize="lg">
 							AED {millify(price)}
 							{rentFrequency && ` / ${rentFrequency}`}
 						</Text>
