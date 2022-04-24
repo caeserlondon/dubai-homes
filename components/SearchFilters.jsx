@@ -14,9 +14,35 @@ import { MdCancel } from "react-icons/md";
 import Image from "next/image";
 import { baseUrl, fetchApi } from "../utils/fetchApi";
 import noresult from "../assets/images/noresult.svg";
+import { filterData, getFilterValues } from "../utils/filterData";
 
 const SearchFilters = () => {
-	return <div>searchFilters</div>;
+	const [filters, setFilters] = useState(filterData);
+
+	const searchProperties = (filterValues) => {};
+
+	return (
+		<Flex bg="yellow.100" p="4" justifyContent="center" flexWrap="wrap">
+			{filters.map((filter) => (
+				<Box key={filter.queryName}>
+					<Select
+						placeholder={filter.placeholder}
+						w="fit-content"
+						p="2"
+						onChange={(e) =>
+							searchProperties({ [filter.queryName]: e.target.value })
+						}
+					>
+						{filter?.items?.map((item) => (
+							<option value={item.value} key={item.value}>
+								{item.name}
+							</option>
+						))}
+					</Select>
+				</Box>
+			))}
+		</Flex>
+	);
 };
 
 export default SearchFilters;
