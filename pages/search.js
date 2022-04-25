@@ -6,7 +6,7 @@ import { BsFilter } from "react-icons/bs";
 
 import Property from "../components/Property";
 import SearchFilters from "../components/SearchFilters";
-import { fetchApi, baseUrl } from "../utils/fetchApi";
+import { baseUrl, fetchApi } from "../utils/fetchApi";
 import noresult from "../assets/images/noresult.svg";
 
 const Search = ({ properties }) => {
@@ -16,6 +16,7 @@ const Search = ({ properties }) => {
 	return (
 		<Box>
 			<Flex
+				onClick={() => setSearchFilters(!searchFilters)}
 				cursor="pointer"
 				bg="yellow.100"
 				borderBottom="1px"
@@ -26,7 +27,6 @@ const Search = ({ properties }) => {
 				fontSize="lg"
 				justifyContent="center"
 				alignItems="center"
-				onClick={() => setSearchFilters((prevFilters) => !prevFilters)}
 			>
 				<Text>Search Property By Filters</Text>
 				<Icon paddingLeft="2" w="7" as={BsFilter} />
@@ -43,15 +43,15 @@ const Search = ({ properties }) => {
 			{properties.length === 0 && (
 				<Flex
 					justifyContent="center"
-					alignItem="center"
-					flexDirection="column"
+					alignItems="center"
+					flexDir="column"
 					marginTop="5"
 					marginBottom="5"
 				>
 					<Image alt="no result" src={noresult} />
 					<Text
 						fontSize="3xl"
-						margingTop="3"
+						marginTop="3"
 						color="yellow.700"
 						alignSelf="center"
 					>
