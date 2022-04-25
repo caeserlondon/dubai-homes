@@ -6,6 +6,7 @@ import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
 import { GoVerified } from "react-icons/go";
 import millify from "millify";
+
 import DefaultImage from "../assets/images/house.jpg";
 
 const Property = ({
@@ -33,10 +34,10 @@ const Property = ({
 		>
 			<Box>
 				<Image
+					alt="house"
 					src={coverPhoto ? coverPhoto.url : DefaultImage}
 					width={400}
 					height={260}
-					alt="house"
 				/>
 			</Box>
 			<Box w="full">
@@ -47,11 +48,11 @@ const Property = ({
 						</Box>
 						<Text fontWeight="bold" fontSize="lg">
 							AED {millify(price)}
-							{rentFrequency && ` / ${rentFrequency}`}
+							{rentFrequency && `/${rentFrequency}`}
 						</Text>
 					</Flex>
 					<Box>
-						<Avatar size="lg" src={agency?.logo?.url} />
+						<Avatar size="lg" src={agency?.logo?.url}></Avatar>
 					</Box>
 				</Flex>
 				<Flex
@@ -61,14 +62,15 @@ const Property = ({
 					w="250px"
 					color="red.700"
 				>
-					{rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft{" "}
-					<BsGridFill />
+					{rooms}
+					<FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
 				</Flex>
 				<Text fontSize="lg" color="yellow.700">
-					{title.length > 30 ? `${title.substring(0, 30)}...` : title}
+					{title.length > 30 ? title.substring(0, 30) + "..." : title}
 				</Text>
 			</Box>
 		</Flex>
 	</Link>
 );
+
 export default Property;
