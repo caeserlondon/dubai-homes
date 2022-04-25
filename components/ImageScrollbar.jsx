@@ -24,7 +24,7 @@ const RightArrow = () => {
 	const { scrollNext } = useContext(VisibilityContext);
 
 	return (
-		<Flex justifyContent="center" alignItems="center" marginRight="1">
+		<Flex justifyContent="center" alignItems="center" marginLeft="1">
 			<Icon
 				as={FaArrowAltCircleRight}
 				onClick={() => scrollNext()}
@@ -35,8 +35,7 @@ const RightArrow = () => {
 		</Flex>
 	);
 };
-
-export default function ImageScrollbar({ data }) {
+export default function ImageSrollbar({ data }) {
 	return (
 		<ScrollMenu
 			LeftArrow={LeftArrow}
@@ -52,13 +51,13 @@ export default function ImageScrollbar({ data }) {
 					p="1"
 				>
 					<Image
+						alt="image"
 						placeholder="blur"
 						blurDataURL={item.url}
 						src={item.url}
 						width={1000}
 						height={500}
-						alt="property"
-						sizes="(max-width: 500px) 100px, (max-width: 1024px) 400px, 1000px"
+						sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px"
 					/>
 				</Box>
 			))}
