@@ -1,4 +1,4 @@
-import { Box, Flex, Spacer, Text } from "@chakra-ui/react";
+import { Box, Flex, Spacer, Text } from "@chakra-ui/layout";
 import { Avatar } from "@chakra-ui/avatar";
 import { FaBed, FaBath } from "react-icons/fa";
 import { BsGridFill } from "react-icons/bs";
@@ -54,9 +54,82 @@ const PropertyDetails = ({
 				{rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft{" "}
 				<BsGridFill />
 			</Flex>
-			<Text fontSize="lg" color="yellow.700">
-				{title.length > 30 ? `${title.substring(0, 30)}...` : title}
-			</Text>
+			<Box marginTop="2">
+				<Text
+					fontSize="lg"
+					color="yellow.700"
+					marginBottom="2"
+					fontWeight="bold"
+				>
+					{title}
+				</Text>
+				<Text lineHeight="2" color="yellow.500">
+					{description}
+				</Text>
+			</Box>
+			<Flex
+				flexWrap="wrap"
+				textTransform="uppercase"
+				justifyContent="space-between"
+			>
+				<Flex
+					justifyContent="space-between"
+					w="400px"
+					borderBottom="1px"
+					borderColor="yellow.400"
+					p="3"
+				>
+					<Text>Type</Text>
+					<Text fontWeight="bold">{type}</Text>
+				</Flex>
+				<Flex
+					justifyContent="space-between"
+					w="400px"
+					borderBottom="1px"
+					borderColor="yellow.400"
+					p="3"
+				>
+					<Text>Purepose</Text>
+					<Text fontWeight="bold">{purpose}</Text>
+				</Flex>
+				{furnishingStatus && (
+					<Flex
+						justifyContent="space-between"
+						w="400px"
+						borderBottom="1px"
+						borderColor="yellow.400"
+						p="3"
+					>
+						<Text>Furnishing Status</Text>
+						<Text fontWeight="bold">{furnishingStatus}</Text>
+					</Flex>
+				)}
+			</Flex>
+			<Box>
+				{amenities.length && (
+					<Text fontSize="2xl" fontWeight="bold" marginTop="5">
+						Amenities
+					</Text>
+				)}
+				<Flex flexWrap="wrap">
+					{amenities.map((item) =>
+						item.amenities.map((amenitiy) => (
+							<Text
+								fontWeight="bold"
+								color="yellow.500"
+								fontSize="l"
+								p="2"
+								bg="yellow.200"
+								m="1"
+								borderRadius="5"
+								key={amenitiy.text}
+							>
+								{amenitiy.text}
+							</Text>
+						))
+					)}
+				</Flex>
+			</Box>
 		</Box>
 	</Box>
 );
