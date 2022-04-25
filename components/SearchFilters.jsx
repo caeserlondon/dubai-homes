@@ -32,12 +32,12 @@ const SearchFilters = () => {
 			query[item.name] = item.value;
 		});
 
-		router.push({ pathname: path, query });
+		router.push({ pathname: path, query: query });
 	};
 
 	return (
 		<Flex bg="yellow.100" p="4" justifyContent="center" flexWrap="wrap">
-			{filters.map((filter) => (
+			{filters?.map((filter) => (
 				<Box key={filter.queryName}>
 					<Select
 						placeholder={filter.placeholder}
