@@ -1,3 +1,7 @@
+<img src="/public/images/dubai-home.png" width="40%" alt="Dubai front page image"/>
+
+<img src="/public/images/dubai-search.png" width="40%" alt="Dubai search page image"/>
+
 # Dubai Homes 🏙️
 
 A modern real estate web application built with **Next.js** that showcases live property listings in Dubai.  
