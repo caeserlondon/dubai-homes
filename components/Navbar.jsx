@@ -8,7 +8,7 @@ import {
 	MenuList,
 	Spacer,
 } from '@chakra-ui/react';
-import Image from 'next/image';
+
 import Link from 'next/link';
 import { BsSearch } from 'react-icons/bs';
 import { FcAbout, FcHome, FcMenu } from 'react-icons/fc';
@@ -39,6 +39,8 @@ const Navbar = () => (
 				Rent A Property
 			</Link>
 		</Box>
+		<Spacer />
+		<Box fontSize='3xl' color='yellow.500' fontWeight='bold'></Box>
 		<Spacer />
 		<Box>
 			<Menu>
