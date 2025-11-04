@@ -4,6 +4,8 @@
 
 # Dubai Homes 🏙️
 
+[Visit the live website @ https://dubai-homes.vercel.app](https://dubai-homes.vercel.app/)
+
 A modern real estate web application built with **Next.js** that showcases live property listings in Dubai.  
 Dubai Homes fetches **real-time data** from the [Bayut API (RapidAPI)](https://rapidapi.com/apidojo/api/bayut/) to display properties available **for sale** and **for rent** — allowing users to explore the Dubai property market interactively.
 
