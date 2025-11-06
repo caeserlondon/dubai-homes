@@ -1,6 +1,8 @@
+<div>
 <img src="/public/images/dubai-home.png" width="40%" alt="Dubai front page image"/>
 
 <img src="/public/images/dubai-search.png" width="40%" alt="Dubai search page image"/>
+</div>
 
 # Dubai Homes 🏙️
 
