@@ -1,12 +1,22 @@
+# Dubai Homes 🏙️
+
+### Under maintenance
+
+## The Bayut API was removed from the RapidAPI Platform on December 16, 2025.
+
+<div>
+<img src="/public/images/rapidapi.png" width="40%"  alt="Rapid api email"/>
+
+<img src="/public/images/undermaintenance.png" width="40%"  alt="Under maintenance"/>
+</div>
+
 <div>
 <img src="/public/images/dubai-home.png" width="40%" alt="Dubai front page image"/>
 
 <img src="/public/images/dubai-search.png" width="40%" alt="Dubai search page image"/>
 </div>
 
-# Dubai Homes 🏙️
-
-[Visit the live website @ https://dubai-homes.vercel.app](https://dubai-homes.vercel.app/)
+[Visit the live website @ https://dubai-homes.vercel.app](https://dubai-homes.vercel.app/) Under maintenance
 
 A modern real estate web application built with **Next.js** that showcases live property listings in Dubai.  
 Dubai Homes fetches **real-time data** from the [Bayut API (RapidAPI)](https://rapidapi.com/apidojo/api/bayut/) to display properties available **for sale** and **for rent** — allowing users to explore the Dubai property market interactively.
