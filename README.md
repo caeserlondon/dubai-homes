@@ -1,6 +1,6 @@
 # Dubai Homes 🏙️
 
-### Under maintenance
+## Under maintenance
 
 ## The Bayut API was removed from the RapidAPI Platform on December 16, 2025.
 
