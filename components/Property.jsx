@@ -1,13 +1,13 @@
-import Link from "next/link";
-import Image from "next/image";
-import { Box, Flex, Text } from "@chakra-ui/layout";
-import { Avatar } from "@chakra-ui/avatar";
-import { FaBed, FaBath } from "react-icons/fa";
-import { BsGridFill } from "react-icons/bs";
-import { GoVerified } from "react-icons/go";
-import millify from "millify";
+import { Avatar } from '@chakra-ui/avatar';
+import { Box, Flex, Text } from '@chakra-ui/layout';
+import millify from 'millify';
+import Image from 'next/image';
+import Link from 'next/link';
+import { BsGridFill } from 'react-icons/bs';
+import { FaBath, FaBed } from 'react-icons/fa';
+import { GoVerified } from 'react-icons/go';
 
-import DefaultImage from "../assets/images/house.jpg";
+const DefaultImage = '/images/house.jpg';
 
 const Property = ({
 	property: {
@@ -25,48 +25,48 @@ const Property = ({
 }) => (
 	<Link href={`/property/${externalID}`} passHref>
 		<Flex
-			flexWrap="wrap"
-			w="420px"
-			p="5"
-			paddingTop="0px"
-			justifyContent="flex-start"
-			cursor="pointer"
+			flexWrap='wrap'
+			w='420px'
+			p='5'
+			paddingTop='0px'
+			justifyContent='flex-start'
+			cursor='pointer'
 		>
 			<Box>
 				<Image
-					alt="house"
-					src={coverPhoto ? coverPhoto.url : DefaultImage}
+					alt='house'
+					src={coverPhoto?.url || DefaultImage}
 					width={400}
 					height={260}
 				/>
 			</Box>
-			<Box w="full">
-				<Flex paddingTop="2" alignItems="center" justifyContent="space-between">
-					<Flex alignItems="center">
-						<Box paddingRight="3" color="red.500">
+			<Box w='full'>
+				<Flex paddingTop='2' alignItems='center' justifyContent='space-between'>
+					<Flex alignItems='center'>
+						<Box paddingRight='3' color='red.500'>
 							{isVerified && <GoVerified />}
 						</Box>
-						<Text fontWeight="bold" fontSize="lg">
+						<Text fontWeight='bold' fontSize='lg'>
 							AED {millify(price)}
 							{rentFrequency && `/${rentFrequency}`}
 						</Text>
 					</Flex>
 					<Box>
-						<Avatar size="lg" src={agency?.logo?.url}></Avatar>
+						<Avatar size='lg' src={agency?.logo?.url}></Avatar>
 					</Box>
 				</Flex>
 				<Flex
-					alignItems="center"
-					p="1"
-					justifyContent="space-between"
-					w="250px"
-					color="red.700"
+					alignItems='center'
+					p='1'
+					justifyContent='space-between'
+					w='250px'
+					color='red.700'
 				>
 					{rooms}
 					<FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
 				</Flex>
-				<Text fontSize="lg" color="yellow.700">
-					{title.length > 30 ? title.substring(0, 30) + "..." : title}
+				<Text fontSize='lg' color='yellow.700'>
+					{title.length > 30 ? title.substring(0, 30) + '...' : title}
 				</Text>
 			</Box>
 		</Flex>
