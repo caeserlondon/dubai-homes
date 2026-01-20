@@ -57,7 +57,7 @@ const PropertyDetails = ({
 			<Text
 				lineHeight='2'
 				color='yellow.700'
-				dangerouslySetInnerHTML={{ __html: description }}
+				dangerouslySetInnerHTML={{ __html: description || '' }}
 			></Text>
 		</Box>
 		<Flex
@@ -103,7 +103,7 @@ const PropertyDetails = ({
 			)}
 		</Flex>
 		<Box>
-			{amenities.length && (
+			{amenities?.length > 0 && (
 				<Text fontSize='2xl' fontWeight='bold' marginTop='5' color='yellow.700'>
 					Amenities:
 				</Text>
