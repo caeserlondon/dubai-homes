@@ -175,7 +175,7 @@ export const forRent = [
 			},
 		],
 	},
-]
+];
 export const forSale = [
 	{
 		id: 1,
@@ -265,4 +265,4 @@ export const forSale = [
 			},
 		],
 	},
-]
+];
