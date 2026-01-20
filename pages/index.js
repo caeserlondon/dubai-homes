@@ -1,10 +1,70 @@
+// pages/index.js
 import { Box, Button, Flex, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import buy from '../assets/images/buy.jpg';
-import rent from '../assets/images/rent.jpg';
 import Property from '../components/Property';
-import { baseUrl, fetchApi } from '../utils/fetchApi';
+
+const buy = '/images/buy.jpg';
+const rent = '/images/rent.jpg';
+
+const mockPropertiesForSale = [
+	{
+		id: '1',
+		externalID: 'mock-1',
+		title: 'Waterfront Elegance | DAMAC Island',
+		price: 3800000,
+		rentFrequency: null,
+		rooms: 3,
+		baths: 4,
+		area: 2200,
+		coverPhoto: { url: buy },
+		agency: { logo: { url: '/images/house.jpg' } },
+		isVerified: true,
+	},
+	{
+		id: '2',
+		externalID: 'mock-2',
+		title: 'Island Living by DAMAC | Ultra Modern',
+		price: 2800000,
+		rentFrequency: null,
+		rooms: 2,
+		baths: 3,
+		area: 1800,
+		coverPhoto: { url: buy },
+		agency: { logo: { url: '/images/house.jpg' } },
+		isVerified: true,
+	},
+];
+
+const mockPropertiesForRent = [
+	{
+		id: '3',
+		externalID: 'mock-3',
+		title: 'High Floor | Marina Skyline View',
+		price: 17000,
+		rentFrequency: 'monthly',
+		rooms: 2,
+		baths: 2,
+		area: 1200,
+		coverPhoto: { url: rent },
+		agency: { logo: { url: '/images/house.jpg' } },
+		isVerified: true,
+	},
+	{
+		id: '4',
+		externalID: 'mock-4',
+		title: 'Summer Deal – One Bedroom Fully Furnished',
+		price: 9500,
+		rentFrequency: 'monthly',
+		rooms: 1,
+		baths: 1,
+		area: 800,
+		coverPhoto: { url: rent },
+		agency: { logo: { url: '/images/house.jpg' } },
+		isVerified: false,
+	},
+];
+
 export const Banner = ({
 	purpose,
 	title1,
@@ -38,23 +98,24 @@ export const Banner = ({
 	</Flex>
 );
 
-const Home = ({ propertiesForSale, propertiesForRent }) => (
+const Home = () => (
 	<Box>
 		<Banner
 			purpose='RENT A HOME'
-			title1='Reantal Homes for'
+			title1='Rental Homes for'
 			title2='Everyone.'
 			desc1='Explore Apartments, Villas, Homes'
 			desc2='And More...'
 			buttonText='Explore Renting'
-			linkName='/search?porpose=for-rent'
+			linkName='/search?purpose=for-rent'
 			imageUrl={rent}
 		/>
-		<Flex flexWrap='wrap'>
-			{propertiesForRent.map((property) => (
+		<Flex flexWrap='wrap' justifyContent='center' gap='6' p='4'>
+			{mockPropertiesForRent.map((property) => (
 				<Property property={property} key={property.id} />
 			))}
 		</Flex>
+
 		<Banner
 			purpose='BUY A HOME'
 			title1='Find, Buy & Own Your'
@@ -62,30 +123,16 @@ const Home = ({ propertiesForSale, propertiesForRent }) => (
 			desc1='Explore Apartments, Villas, Homes'
 			desc2='And More...'
 			buttonText='Explore Buying'
-			linkName='/search?porpose=for-sale'
+			linkName='/search?purpose=for-sale'
 			imageUrl={buy}
 		/>
-		<Flex flexWrap='wrap'>
-			{propertiesForSale.map((property) => (
+		<Flex flexWrap='wrap' justifyContent='center' gap='6' p='4'>
+			{mockPropertiesForSale.map((property) => (
 				<Property property={property} key={property.id} />
 			))}
 		</Flex>
 	</Box>
 );
 
-export async function getStaticProps() {
-	const propertyForSale = await fetchApi(
-		`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`
-	);
-	const propertyForRent = await fetchApi(
-		`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`
-	);
-
-	return {
-		props: {
-			propertiesForSale: propertyForSale?.hits,
-			propertiesForRent: propertyForRent?.hits,
-		},
-	};
-}
+//
 export default Home;
