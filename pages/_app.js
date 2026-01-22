@@ -1,8 +1,10 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import Router from 'next/router';
 import NProgress from 'nprogress';
+
 import Layout from '../components/Layout';
 import '../styles/globals.css';
+
 import theme from '/theme';
 
 function MyApp({ Component, pageProps }) {
